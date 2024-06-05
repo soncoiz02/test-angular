@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 // import {IndexComponent} from './records/components/index/index.component';
 //import * as $ from 'jquery';
 import { NgIf } from '@angular/common';
@@ -24,6 +24,7 @@ const APP_DIRECTIVES = [AsideToggleDirective, NAV_DROPDOWN_DIRECTIVES, ReplaceDi
     FooterComponent,
     APP_SIDEBAR_NAV,
     SidebarMoreComponent,
+    RouterLink
     // ...APP_DIRECTIVES,
   ],
 })

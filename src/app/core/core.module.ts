@@ -12,7 +12,7 @@ import { AuthService } from './services/auth.service';
     CommonModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true },
+    // { provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true },
     ApiService,
     AuthService,
     CoreModule

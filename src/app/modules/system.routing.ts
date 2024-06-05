@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SystemComponent } from './system.component';
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
   {
     path: '', component: SystemComponent,
     children: [
+      {
+        path: 'list',
+        component: TestComponent
+      },
       // {
       //   path: 'lists',
       //   loadChildren: './lists/lists.module#ListsModule',
@@ -18,7 +23,7 @@ const routes: Routes = [
       //   //canActivate: [PermissionGuard]
       // },
       // {
-      //   path: 'products', loadChildren: './products/products.module#ProductsModule',
+      //   path: 'products', loadChildren: './products/products.module#ProductsModule', 
       //   data: { brec: 'ds_danh_muc' },
       //   //canActivate: [PermissionGuard]
       // },

@@ -11,15 +11,15 @@ import { FormsModule } from "@angular/forms";
 import { NgIf, NgFor } from "@angular/common";
 
 @Component({
-    selector: "app-header",
-    templateUrl: "./header.component.html",
-    styleUrls: ["./header.component.scss"],
-    standalone: true,
-    imports: [
-        NgIf,
-        FormsModule,
-        NgFor,
-    ],
+  selector: "app-header",
+  templateUrl: "./header.component.html",
+  styleUrls: ["./header.component.scss"],
+  standalone: true,
+  imports: [
+    NgIf,
+    FormsModule,
+    NgFor
+  ],
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
   @ViewChild(DxDataGridComponent) dataGrid: DxDataGridComponent | undefined;
@@ -51,34 +51,34 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     //private data: SharedConfigService,
     //private loginService: LoginService
   ) {
-    if (this.authService.getLanguage() != "vn") {
-      this.isVn = false;
-    }
-    this._translate = this.authService.getTranslate();
-    this.currentUser = this.authService.currentUser;
-    this.class_header = "app-header-system";
+    // if (this.authService.getLanguage() != "vn") {
+    //   this.isVn = false;
+    // }
+    // this._translate = this.authService.getTranslate();
+    // this.currentUser = this.authService.currentUser;
+    // this.class_header = "app-header-system";
   }
   ngAfterViewInit(): void {
 
   }
 
   ngOnInit() {
-    this._accounts = JSON.parse(JSON.stringify(this.currentUser.accounts));
-    this.account = this._accounts[0];
-    //this.data.currentMessage.subscribe((message: any) => (this.message = message));
-    //KY_VA_NOP_HO_SO
-    if (this.currentUser.user && this.currentUser.user.permissions && this.currentUser.user.permissions.length > 0) {
-      for (let i = 0; i < this.currentUser.user.permissions.length; i++) {
-        let roles = this.currentUser.user.permissions[i].roles;
-        if (roles && roles.length > 0) {
-          let role = roles.filter((p: any) => p == "KY_VA_NOP_HO_SO")[0];
-          if (role) {
-            this.isKyVaNop = true;
-            break;
-          }
-        }
-      }
-    }
+    // this._accounts = JSON.parse(JSON.stringify(this.currentUser.accounts));
+    // this.account = this._accounts[0];
+    // //this.data.currentMessage.subscribe((message: any) => (this.message = message));
+    // //KY_VA_NOP_HO_SO
+    // if (this.currentUser.user && this.currentUser.user.permissions && this.currentUser.user.permissions.length > 0) {
+    //   for (let i = 0; i < this.currentUser.user.permissions.length; i++) {
+    //     let roles = this.currentUser.user.permissions[i].roles;
+    //     if (roles && roles.length > 0) {
+    //       let role = roles.filter((p: any) => p == "KY_VA_NOP_HO_SO")[0];
+    //       if (role) {
+    //         this.isKyVaNop = true;
+    //         break;
+    //       }
+    //     }
+    //   }
+    // }
     // this.configs = this.authService.configs;
     // if (this.configs.system_parameter && this.currentUser.default_account) {
     //   if (this.configs.system_parameter.nhom_doi_tuong != this.currentUser.default_account.unit_type) {

@@ -1,11 +1,12 @@
 <div *ngIf="!authService._isMobile" class="app-body">
 
   <div class="sidebar-left" style="float: left; z-index: 100; box-shadow: -10px -15px 4px 10px #959595">
-    <app-sidebar></app-sidebar>
+    <!-- <app-sidebar></app-sidebar> -->
   </div>
 
   <div class="content-right">
-    <app-header></app-header>
+    <!-- <app-header></app-header> -->
+    <a routerLink="/list">Test</a>
     <main class="main">
       <div class="container-fluid mb-0" style="width: calc(100vw - 76px)">
         <router-outlet></router-outlet>

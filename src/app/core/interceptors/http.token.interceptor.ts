@@ -55,35 +55,35 @@ export class HttpTokenInterceptor implements HttpInterceptor {
       //}
       const request = req.clone({ setHeaders: headersConfig });
       return next.handle(request)
-      .map((event: HttpEvent<any>) => {
-        if (event instanceof HttpResponse) {
-          if (event.body.code == "IWE008") {
-            Library.hideloading();
-            Library.notify(this._translate.NOTIFY.dang_nhap_het_han, "error");
-            this.authService.logout();
-            this.router.navigate(['/login']);
-            //refesh lại trình duyệt để load code mới nhất về
-            //window.location.href = '/login';
+        .map((event: HttpEvent<any>) => {
+          if (event instanceof HttpResponse) {
+            if (event.body.code == "IWE008") {
+              Library.hideloading();
+              Library.notify(this._translate.NOTIFY.dang_nhap_het_han, "error");
+              this.authService.logout();
+              this.router.navigate(['/login']);
+              //refesh lại trình duyệt để load code mới nhất về
+              //window.location.href = '/login';
+            }
           }
-        }
-        return event;
-      });
+          return event;
+        });
     } else {
       const request = req.clone({ setHeaders: headersConfig });
       return next.handle(request)
-      .map((event: HttpEvent<any>) => {
-        if (event instanceof HttpResponse) {
-          if (event.body.code == "IWE008") {
-            Library.hideloading();
-            Library.notify(this._translate.NOTIFY.dang_nhap_het_han, "error");
-            this.authService.logout();
-            this.router.navigate(['/login']);
-            //refesh lại trình duyệt để load code mới nhất về
-            //window.location.href = '/login';
+        .map((event: HttpEvent<any>) => {
+          if (event instanceof HttpResponse) {
+            if (event.body.code == "IWE008") {
+              Library.hideloading();
+              Library.notify(this._translate.NOTIFY.dang_nhap_het_han, "error");
+              this.authService.logout();
+              this.router.navigate(['/login']);
+              //refesh lại trình duyệt để load code mới nhất về
+              //window.location.href = '/login';
+            }
           }
-        }
-        return event;
-      });
+          return event;
+        });
     }
   }
 }

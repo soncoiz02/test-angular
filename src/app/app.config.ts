@@ -15,20 +15,18 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideServiceWorker('ngsw-worker.js', {
-      enabled: !isDevMode(),
-      registrationStrategy: 'registerWhenStable:30000'
+        enabled: !isDevMode(),
+        registrationStrategy: 'registerWhenStable:30000'
     }),
-    importProvidersFrom(
-      BrowserModule,
-      CoreModule,
-      // SharedModule,
-      // AuthModule,
-      // vTranslateModule,
-      ReactiveFormsModule,
-      HttpClientModule,
-      BsDropdownModule.forRoot(),
-      ModalModule.forRoot()
-    ),
-    provideAnimations()
-  ]
+    importProvidersFrom(BrowserModule, CoreModule, 
+    // SharedModule,
+    // AuthModule,
+    // vTranslateModule,
+    ReactiveFormsModule, HttpClientModule, BsDropdownModule.forRoot(), ModalModule.forRoot()),
+    provideAnimations(),
+    provideServiceWorker('ngsw-worker.js', {
+        enabled: !isDevMode(),
+        registrationStrategy: 'registerWhenStable:30000'
+    })
+]
 };
