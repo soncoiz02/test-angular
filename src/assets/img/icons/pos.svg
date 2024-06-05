@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 32 32" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+  <g id="Layer_1" transform="matrix(1, 0, 0, 1, 4.440892098500626e-16, 0)"/>
+  <g id="Layer_2" transform="matrix(1, 0, 0, 1, 4.440892098500626e-16, 0)">
+    <g>
+      <g>
+        <path d="     M12,10h-1.5C9.7,10,9,10.7,9,11.5v0c0,0.8,0.7,1.5,1.5,1.5h0c0.8,0,1.5,0.7,1.5,1.5v0c0,0.8-0.7,1.5-1.5,1.5H9" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" style="stroke: rgb(111, 127, 138);"/>
+        <path d="     M15,16v-4.5c0-0.8,0.7-1.5,1.5-1.5h0c0.8,0,1.5,0.7,1.5,1.5V16" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" style="stroke: rgb(111, 127, 138);"/>
+        <line fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="15" x2="18" y1="13" y2="13" style="stroke: rgb(111, 127, 138);"/>
+        <polyline fill="none" points="     21,10 21,16 24,16    " stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" style="stroke: rgb(111, 127, 138);"/>
+        <polyline fill="none" points="     29,10 27,10 27,16 29,16    " stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" style="stroke: rgb(111, 127, 138);"/>
+        <line fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="29" x2="27" y1="13" y2="13" style="stroke: rgb(111, 127, 138);"/>
+      </g>
+      <polyline fill="none" points="25 20 8 30 13 20 2 20 9.5 3.125 10 2 26 2 23 7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" style="stroke: rgb(111, 127, 138);"/>
+    </g>
+  </g>
+</svg>

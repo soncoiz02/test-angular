@@ -1,0 +1,243 @@
+.row.row-equal {
+  padding-right: ($grid-gutter-width / 4);
+  padding-left: ($grid-gutter-width / 4);
+  margin-right: ($grid-gutter-width / -2);
+  margin-left: ($grid-gutter-width / -2);
+
+  [class*="col-"] {
+    padding-right: ($grid-gutter-width / 4);
+    padding-left: ($grid-gutter-width / 4);
+  }
+}
+
+.main {
+  background-color: #fafafa;
+  margin-top: $header-height;
+  //margin-left: $sidebar-width;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .container-fluid {
+    //height: $container-fluid-height;
+    padding-right: 0px;
+    padding-left: 0px;
+    // padding-top: 5px;
+    // margin-bottom: 50px;
+  }
+  .container-fluid-record {
+    height: calc(#{$container-fluid-height} - 3px);
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+.sidebar-minimized {
+  main {
+    //margin-left: $sidebar-minimized-width;
+  }
+}
+
+.pmd-card {
+  border: 1px solid #e4e5e6;
+}
+
+.pull-right {
+  // margin-bottom: 2px;
+  margin-top: 4px;
+  margin-right: 3px;
+}
+
+.dx-column-lines-color {
+  background-color: #f9f9f9;
+}
+
+.dx-datagrid-rowsview .dx-selection.dx-row > td,
+.dx-datagrid-rowsview .dx-selection.dx-row:hover > td {
+  background-color: #dae5fb !important;
+}
+
+.dx-datagrid-rowsview .dx-select-checkboxes-hidden .dx-select-checkbox {
+  display: block !important;
+}
+
+.dx-treelist-select-all .dx-checkbox {
+  background-color: #f5f5f5 !important;
+}
+#gridContainer {
+  border: 1px solid rgb(215, 215, 215);
+}
+ .dx-datagrid {
+  color: #000;
+  .dx-datagrid-headers {
+    color: #000;
+    border-bottom: 0;
+  }
+}
+
+.list-header {
+  //padding-bottom: 8px;
+  height: $index-toolbar-height;
+  background: white;
+  h2 {
+    padding-top: 10px;
+  }
+  .list-title {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-transform: uppercase;
+  }
+  .option-header {
+  }
+  .button-header {
+  }
+}
+
+.list-report .dx-list-item-content {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.dx-datagrid-content .dx-data-row td {
+  vertical-align: middle !important;
+}
+
+//css header table
+tbody {
+  .dx-header-row {
+    // font-weight: bold;
+    color: #201f35;
+    .dx-datagrid-action {
+      text-align: center !important;
+    }
+  }
+  tr.dx-header-row .dx-cell-focus-disabled {
+    text-align: center !important;
+  }
+}
+
+//css selectbox table
+.dx-datagrid-content .dx-datagrid-table .dx-row .dx-command-select {
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+}
+.dx-pager {
+  padding-top: 2px;
+  padding-bottom: 0px;
+}
+//custom for footer alway in bottom
+body,
+app-root,
+app-system,
+app-home,
+app-login {
+  height: 100%;
+}
+
+//custom css cho tabpaner devexpress
+.dx-tabpanel-container {
+  background-color: #fff;
+}
+
+// .dx-layout-manager .dx-label-h-align.dx-flex-layout .dx-field-item-content:not(.dx-textbox.dx-texteditor.dx-widget.dx-state-disabled) {
+//   background: red;
+// }
+
+//css for dx autocomplete dropdown
+.dx-overlay-wrapper.dx-dropdowneditor-overlay.dx-popup-wrapper.dx-dropdownlist-popup-wrapper.dx-autocomplete-popup-wrapper
+  .dx-overlay-content.dx-popup-normal.dx-popup-draggable.dx-resizable {
+  min-width: 300px !important;
+}
+
+//khoảng cách giữa các form
+.dx-layout-manager .dx-field-item:not(.dx-first-row) {
+  padding-top: 6px;
+}
+
+// Căn chỉnh input có thêm button version 2 mà lập hóa đơn
+.dx-layout-manager .dx-field-item:not(.dx-last-col) {
+  padding-right: 0px;
+}
+
+//khi chọn 1 hàng màu chữ không thay đổi
+.dx-datagrid-rowsview .dx-selection.dx-row > td,
+.dx-datagrid-rowsview .dx-selection.dx-row:hover > td,
+.dx-datagrid-rowsview .dx-selection.dx-row > tr > td,
+.dx-datagrid-rowsview .dx-selection.dx-row:hover > tr > td {
+  //color: inherit;
+}
+
+//tìm kiếm mở rộng
+app-search-advanced {
+  width: 100%;
+}
+
+//sửa lỗi dx-item date box bị lệch
+.dx-datebox.dx-textbox.dx-texteditor.dx-widget.dx-visibility-change-handler.dx-auto-width.dx-dropdowneditor-button-visible.dx-dropdowneditor.dx-datebox-date.dx-datebox-calendar {
+  width: 100% !important;
+}
+
+//icon sort title column
+.dx-datagrid .dx-header-row .dx-datagrid-text-content {
+  width: 100%;
+  .icon-dx-sort {
+    float: left;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.dx-datagrid .dx-header-row .dx-column-indicators {
+  float: right;
+}
+
+.dx-datagrid .dx-header-row .dx-datagrid-action {
+  .dx-visibility-hidden {
+    //display: none;
+  }
+  .dx-sort-indicator {
+    max-width: calc(100% - 17px) !important;
+  }
+}
+
+.dx-colorbox-overlay.dx-overlay-content {
+  .dx-popup-content {
+    padding: 5px;
+  }
+
+  .dx-popup-bottom.dx-toolbar {
+    padding: 5px;
+  }
+}
+
+//css header dx data grip
+.dx-datagrid-headers tr.dx-header-row td {
+  vertical-align: middle !important;
+}
+
+// css khoảng trắng khi sang trang dx data grip
+tr.dx-row.dx-column-lines.dx-freespace-row {
+  height: auto !important;
+}
+
+.dx-dropdownlist-popup-wrapper.dx-popup-wrapper .dx-overlay-content .dx-list-item-content {
+  white-space: pre-line;
+  text-overflow: initial;
+}
+
+//css cho select nếu dài quá sẽ tự xuống dòng
+.dx-dropdownlist-popup-wrapper.dx-popup-wrapper .dx-overlay-content .dx-list-item-content {
+  white-space: pre-line;
+  text-overflow: initial;
+}
+
+#reportCheckbox .dx-checkbox-icon {
+  border: 1px solid #333;
+}
+::ng-deep #gridContainerIndex {
+  height: calc(100% - #{$index-toolbar-height});
+}

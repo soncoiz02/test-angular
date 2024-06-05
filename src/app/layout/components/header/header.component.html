@@ -1,0 +1,133 @@
+<header style="background-color: rgba(243, 243, 243, 1);" [style.width]="authService._isMobile? '100%' :''"
+  class="app-header navbar">
+  <div class="pl-4">
+    <h3 class="text row" style="margin-top: 0px !important; margin-left: 0;">
+      <ng-container *ngIf="currentUser">
+        <div class="dropdown-infor-unit" style="float: left;" (mouseleave)="changeStyle($event)">
+          <div (click)="openPopup()">
+            <span style="font-weight: bold;">{{ currentUser.default_account.name }}
+            </span>
+            <img src="assets/img/icons/show_more.png" /> &nbsp;&nbsp;
+            <span style="color: rgb(147, 147, 147);">{{message}}</span>
+          </div>
+          <div *ngIf="isShowPopup" id="dropdown-unit-parent" class="dropdown-content-infor-unit"
+            style="left: 0; min-width: 350px;max-height: 350px;position: absolute;">
+            <div *ngIf="isShowCheckWait && isKyVaNop" class="checkbox" style="float: left;margin-top: 13px;">
+              <div style="display: flex;"><input [(ngModel)]="checkWaitSign" #waitSignCheckBox type="checkbox"
+                  id="waitSignCheckBox" name="wait-sign" (change)="onCheckWaitSign(waitSignCheckBox.checked)">
+                <div>Chỉ hiển thị mã đơn vị có hồ sơ chờ ký</div>
+              </div>
+            </div>
+            <hr *ngIf="isShowCheckWait && isKyVaNop"
+              style="margin-top:38px;margin-bottom:0px;background-color: #ddd;" />
+            <input [(ngModel)]="txttimkiem" type="text" placeholder="Nhập mã hoặc tên đơn vị cần tìm" id="input-unit"
+              >
+            <div>
+              <div id="dropdown-unit" class="dropdown-content-infor-unit"
+                style="left: 0; min-width: 350px;max-height: 260px;">
+                <ng-template ngFor let-account [ngForOf]="_accounts">
+                  <a *ngIf="account.id == currentUser.default_account.id">{{ account.code }}<span
+                      *ngIf="account.object_name">: {{account.object_name}}</span><span style="color: red;"
+                      *ngIf="isKyVaNop && account.record_wait_sign && account.record_wait_sign !='0'">
+                      ({{account.record_wait_sign}})</span>
+                  </a>
+                  <a *ngIf="account.id != currentUser.default_account.id" (click)="choiseDefaultAccount(account.id)">{{
+                    account.code }}<span *ngIf="account.object_name">:
+                      {{account.object_name}}</span><span style="color: red;"
+                      *ngIf="isKyVaNop && account.record_wait_sign && account.record_wait_sign !='0'">
+                      ({{account.record_wait_sign}})</span>
+                  </a>
+                </ng-template>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </ng-container>
+    </h3>
+  </div>
+  <div class="manage-tab">
+    <ul class="nav nav-home-header">
+      <li class="nav-item">
+        <div class="pl-4">
+          <h3 style="color: rgb(0, 0, 0);" class="text-uppercase text">
+            <ng-container *ngIf="currentUser">
+              <span>{{ currentUser.unit.name }} </span> |
+              <span style="font-weight: bold;">{{
+                currentUser.unit.tax_code
+                }}</span>
+            </ng-container>
+          </h3>
+        </div>
+      </li>
+      <li class="nav-item">
+        <div class="dropdown" style="float: right;">
+          <img src="assets/img/icons/user.png" />
+          <div class="dropdown-content" style="width: 200px">
+            <div class="row" style="margin: 0px;">
+              <div class="col-md-12" style="height: 44px; margin-top: 19px;">
+                <img src="assets/img/icons/user-logo.svg" />
+              </div>
+            </div>
+            <div class="row" style="margin: 0px;">
+              <div class="col-md-12" style="font-weight: bold; margin-top: 7px;">
+                {{ currentUser.user.name }}
+              </div>
+            </div>
+            <div class="row" style="
+                margin: 0px;
+                border-top: 1px solid RGB(243, 243, 243);
+                margin-top: 10px;
+              ">
+              <div class="col-md-6" style="
+                  padding: 0px;
+                  border-right: 1px solid RGB(243, 243, 243);
+                ">
+                <a style="
+                    font-size: 11px;
+                    text-align: center;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                  " href="javascript:void(0)" (click)="changeUserInfo()">{{ _translate.CONTROLL.BUTTON.thay_doi_thong_tin }}</a>
+              </div>
+              <div class="col-md-6" style="padding: 0px;">
+                <a style="
+                    font-size: 11px;
+                    text-align: center;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    color: rgba(236, 30, 36, 1);
+                  " href="javascript:void(0)" (click)="logout()">{{ _translate.CONTROLL.LABEL.dang_xuat }}</a>
+              </div>
+            </div>
+            <!-- <a routerLink="/system/unit-account">{{ currentUser.user.username }} |
+              {{ currentUser.user.name }}</a> -->
+          </div>
+        </div>
+      </li>
+
+      <!-- <li class="nav-item">
+        <app-bell></app-bell>
+      </li> -->
+      <!-- <li class="nav-item">
+        <a routerLink="/system/information-service"><img src="assets/img/icons/infomation.png"></a>
+      </li> -->
+      <!-- <li *ngIf="!isVn"  class="nav-item">
+        <a href="javascript:void(0)" (click)="changLangugeVn()"><img src="assets/img/icons/VIE.png"></a>
+      </li>
+      <li *ngIf="isVn"  class="nav-item">
+        <a href="javascript:void(0)" (click)="changLangugeEn()"><img src="assets/img/icons/ENG.png"></a>
+      </li> -->
+      <!-- <li class="nav-item">
+        <a href="javascript:void(0)" (click)="logout()"><img src="assets/img/icons/logout.png"></a>
+      </li> -->
+    </ul>
+  </div>
+
+  <div class="hty-header-banner d-md-down-none">
+    <!-- content -->
+  </div>
+  <ul class="nav navbar-nav ml-auto" style="margin-right: 12px;">
+    <li></li>
+  </ul>
+</header>

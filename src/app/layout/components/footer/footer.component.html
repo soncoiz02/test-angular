@@ -1,0 +1,38 @@
+<footer class="system-footer">
+  <div class="row footer-row">
+    <div class="col-md-8 footer-left" style="font-size: 11px;">
+      <p>
+        <a (click)="startApp('C:\\Program Files (x86)\\UltraViewer\\UltraViewer_Desktop.exe', true)"
+          style="text-decoration: none;color: rgba(0, 0, 0, 0.6);cursor: pointer;"><img
+            src="assets/img/icons/ultraviewer.svg" alt="ultraviewer">
+          &nbsp; UltraViewer</a>
+        &nbsp;
+        <a (click)="startApp('C:\\Program Files (x86)\\TeamViewer\\TeamViewer.exe')"
+          style="text-decoration: none; color: rgba(0, 0, 0, 0.6);cursor: pointer;"><img
+            src="assets/img/icons/teamviewer.svg" alt="teamviewer">
+          &nbsp; TeamViewer</a>
+
+        &nbsp;<img src="assets/img/icons/hotline-black.svg" alt="hotline">
+        &nbsp;<span style="color: rgba(0, 0, 0, 0.6);">{{ _translate.FOOTER.HOME.tong_dai_ho_tro }}</span> {{
+        _translate.FOOTER.HOME.mien_bac}}: <span style="font-weight: bold;color: rgba(0, 0, 0, 0.9);">19006142</span> |
+        {{ _translate.FOOTER.HOME.mien_nam
+        }}: <span style="font-weight: bold;color: rgba(0, 0, 0, 0.9)">19006139</span>
+      </p>
+    </div>
+    <div class="col-md-4 footer-right" style="font-size: 10px;">
+      <div style="float: right; margin-left: 12px;">
+        <p style="color: rgba(0, 0, 0, 0.6);">{{ _translate.FOOTER.HOME.phien_ban }} {{ version }}</p>
+      </div>
+      <div style="float: right;margin-left: 2px;margin-top: -4px;">
+        <img src="assets/img/icons/copyright.svg">
+      </div>
+      <div style="float: right;">
+        <a href="https://efy.com.vn/" target="_blank" style="text-decoration: none;color: initial">
+          EFY Việt Nam</a>
+      </div>
+      <div style="float: right;margin-right: 4px;margin-top: -3px;">
+        <img src="assets/img/icons/logo_efy.svg">
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,103 @@
+<nav *ngIf="!authService._isMobile" class="sidebar-nav">
+    <ul class="nav-bar">
+        <li id="icon-lg" class="nav-item">
+            <a *ngIf="currentUser.user.username =='superadmin'" routerLink="/config-procedures"><img
+                    src="assets/img/logo_bhxhdt_menu.svg" class="logo-ihoadon-mini" alt="ihoadon" /></a>
+            <a *ngIf="currentUser.user.username !='superadmin'"><img src="assets/img/logo_bhxhdt_menu.svg"
+                    class="logo-ihoadon-mini" alt="ihoadon" /></a>
+        </li>
+        <ng-template ngFor let-navitem [ngForOf]="navigation">
+            <!-- <a routerLink="{{navitem.url}}"> -->
+            <div *ngIf="!navitem.children && isPermissions(navitem)" [class]="checkExpiration(navitem)"
+                id="navitem.name">
+                <a *ngIf="navitem.url !='/system/tutorial/document'" style="text-decoration: none"
+                    routerLink="{{navitem.url}}">
+                    <div *ngIf=" checkActive(navitem)"
+                        style="float: right;width: 2px;height: 100%;background-color: rgba(205, 33, 41, 1);">
+                    </div>
+                    <div [class]="classActive(navitem)">
+                        <div *ngIf="navitem.url =='/system/notification'">
+
+                            <img class="sidebar-icon" [src]="iconActive(navitem)" alt="">
+                            <span *ngIf="message" id="noti-number">{{message}}</span>
+                        </div>
+                        <div *ngIf="navitem.url !='/system/notification'">
+                            <img class="sidebar-icon" [src]="iconActive(navitem)" alt="">
+                        </div>
+                        <div style="margin-top: 5px;">
+                            <i style="font-style: normal;">{{navitem.name}}</i>
+                        </div>
+                    </div>
+                </a>
+                <a *ngIf="navitem.url =='/system/tutorial/document'" style="text-decoration: none"
+                    href="http://help.baohiemxahoidientu.vn/" target="_blank">
+                    <div *ngIf="checkActive(navitem)"
+                        style="float: right;width: 2px;height: 100%;background-color: rgba(205, 33, 41, 1);">
+                    </div>
+                    <div [class]="classActive(navitem)">
+                        <img class="sidebar-icon" [src]="iconActive(navitem)" alt="">
+                        <div style="margin-top: 5px;">
+                            <i style="font-style: normal;">{{navitem.name}}</i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div *ngIf="navitem.children" class="dropdown" style="float:left;">
+                <div id="navitem.name" [class]="checkExpiration(navitem)">
+                    <div *ngIf="classHeThongActive(navitem)=='sidebar-active'"
+                        style="float: right;width: 2px;height: 100%;background-color: rgba(205, 33, 41, 1);">
+                    </div>
+                    <div [class]="classHeThongActive(navitem)">
+                        <div>
+                            <img class="sidebar-icon" [src]="iconHeThongActive(navitem)" alt="">
+                        </div>
+                        <div style="margin-top: 5px;">
+                            <i style="font-style: normal;">{{navitem.name}}</i>
+                        </div>
+                    </div>
+                    <div class="dropdown-content" style="left:0; margin-left: 76px; width: 180px; max-height: 180px;"
+                        [style.margin-top]="classHeThongActive(navitem)=='sidebar-active' ? '0px' : '-45px'">
+                        <ng-template ngFor let-children [ngForOf]="navitem.children">
+                            <!--                            <img *ngIf="isPermissions(children)" class="sidebar-icon" src="{{children.icon}}" alt="">-->
+                            <a style="border-bottom: 1px solid #ddd; height: 34px"
+                                *ngIf="isPermissions(children) && isExpired(children)"
+                                routerLink="{{children.url}}">{{children.name}}</a>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+            <!-- </a> -->
+        </ng-template>
+    </ul>
+</nav>
+<div *ngIf="!authService._isMobile" class="date-footer" [routerLink]="['/system/information-service']"
+    style="position: fixed; bottom: 26px; text-align: center; left: 10px; cursor: pointer;">
+    <div style="text-align: center;">
+        <span style="color: black;font-size: 11px;">Hết hạn</span>
+    </div>
+    <div style="text-align: center;margin-bottom: 10px;">
+        <span id="thoi_han" style="font-weight: bold;font-size: 11px;">{{this.formatDate}}</span>
+    </div>
+</div>
+
+<footer *ngIf="authService._isMobile" class="system-footer" style="height: 43px; text-align: center; margin-top: 0px !important;">
+    <ng-template ngFor let-navitem [ngForOf]="navigation">
+        <div style="width: 20%; height: 38px; border-radius: 5px; float: left; display: flex; justify-content: center; align-items: center; margin-top: -2px;"
+        [style.background-color] ="checkActive(navitem)? 'rgba(222, 232, 241, 1)':''">
+            <a style="text-decoration: none; margin-top: 5px;" routerLink="{{navitem.url}}" [style.color] = "checkActive(navitem)? 'rgba(26, 104, 168, 1)':'rgba(111, 127, 138, 1)'">
+                <!-- <div *ngIf=" checkActive(navitem)"
+                        style="float: right;width: 2px;height: 100%;background-color: rgba(205, 33, 41, 1);">
+                    </div> -->
+                <!-- <div [class]="classActive(navitem)"> -->
+                <!-- <img class="sidebar-icon-mobile" [src]="iconActive(navitem)" alt=""> -->
+                <i [class]="navitem.icon" aria-hidden="true"></i>
+                <div>
+                    <i
+                        style="font-family: roboto; font-style: normal; font-size: 12px; font-weight: 500;">{{navitem.name}}</i>
+                </div>
+                <!-- </div> -->
+            </a>
+        </div>
+    </ng-template>
+</footer>

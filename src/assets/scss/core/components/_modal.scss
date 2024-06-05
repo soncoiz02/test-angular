@@ -1,0 +1,53 @@
+@each $color, $value in $theme-colors {
+  .modal-#{$color} {
+    .modal-content {
+      border-color: $value;
+    }
+
+    .modal-header {
+      color: #fff;
+      background-color: $value;
+    }
+  }
+}
+
+.modal-hg {
+  max-width: 98%;
+  margin: 5px;
+}
+.full-modal {
+  max-width: 80%;
+}
+
+.full-modal-view {
+  max-width: 1130px;
+}
+
+.dialog-doi-chieu {
+  margin: 105px 118px 0px 118px !important;
+}
+.full-width {
+  max-width: 98%;
+}
+.full-100 {
+  max-width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.modal-header {
+  padding: 10px 20px;
+}
+
+.modal-title {
+  font-weight: bold !important;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 1);
+  margin-top: 7px !important;
+}
+
+.child-modal {
+  -webkit-box-shadow: 5px 6px 11px -3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 5px 6px 11px -3px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 6px 11px -3px rgba(0, 0, 0, 0.3);
+}

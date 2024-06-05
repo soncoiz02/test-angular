@@ -1,0 +1,52 @@
+.padding-top-dropdown {
+  padding-top: -45px;
+}
+
+#noti-number {
+  background-color: rgba(176, 36, 42, 1);
+  color: white;
+  border-radius: 6px;
+  font-size: 10px;
+  padding: 1px 3px 1px 3px;
+  position: absolute;
+  margin-top: 3px;
+}
+.disabled {
+  opacity: 0.4;
+  pointer-events: none; //This makes it not clickable
+}
+
+#icon-lg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  height: 64.14px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+//
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.date-footer:active, .date-footer:focus{
+  outline: 0;
+  border: none;
+}

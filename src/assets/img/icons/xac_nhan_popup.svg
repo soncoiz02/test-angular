@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="35.996" viewBox="0 0 36 35.996">
+  <defs>
+    <filter id="Path_2206" x="0" y="0" width="36" height="35.996" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-color="#8dc640" flood-opacity="0.478"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="xac_nhan_popup" data-name="xac nhan_popup" transform="translate(-528 -158)">
+    <g transform="matrix(1, 0, 0, 1, 528, 158)" filter="url(#Path_2206)">
+      <path id="Path_2206-2" data-name="Path 2206" d="M21.682,22.42c-3.677,3-15.159,3-18.762,0-3.677-3-3.3-15.835,0-19.212s15.46-3.377,18.762,0S25.359,19.418,21.682,22.42Z" transform="translate(3.7 3.32)" fill="#8dc640"/>
+    </g>
+    <g id="tick_1_" data-name="tick (1)" transform="translate(538 101.003)">
+      <g id="Group_865" data-name="Group 865" transform="translate(0 67.997)">
+        <path id="Path_2207" data-name="Path 2207" d="M12.611,68.185a.64.64,0,0,0-.905,0L4.039,75.852,1.092,72.9a.64.64,0,0,0-.905.9l3.4,3.4a.64.64,0,0,0,.905,0l8.119-8.119A.64.64,0,0,0,12.611,68.185Z" transform="translate(0 -67.997)" fill="#fff" stroke="#fff" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,144 @@
+.input-group-addon,
+.input-group-btn {
+  min-width: 40px;
+  white-space: nowrap;
+  vertical-align: middle; // Match the inputs
+}
+.dx-item .dx-texteditor{
+  border-radius: 0;
+  input{
+    min-height: 20px;
+    max-height: 25px;
+  }
+}
+.dx-item .dx-checkbox-container{
+  margin-right: 30px;
+}
+
+.dx-placeholder:before {
+  padding: 3px 9px 8px;
+}
+
+.dx-item .dx-field-item-label-content{
+  text-align: right;
+}
+//css select area content
+.dx-overlay-content.dx-popup-normal.dx-popup-draggable.dx-resizable {
+  border-radius: 0px;
+}
+
+//file upload
+.dx-fileuploader-show-file-list .dx-fileuploader-files-container {
+  padding-top: 0px;
+}
+.dx-fileuploader-files-container {
+  padding: 0px 3px 0;
+}
+
+.list-header .dx-texteditor-input {
+  padding-top: 0 !important;
+}
+
+.dx-item .dx-checkbox-indeterminate .dx-checkbox-icon:before {
+  width: 13px;
+  height: 13px;
+  left: 1px;
+  top: 1px;
+}
+.dx-item-content , .dx-checkbox-container {
+  .dx-checkbox-icon {
+    width: 16px !important;
+    height: 16px !important;
+    font-size: 13px;
+  }
+
+  .dx-checkbox-text{
+    width: auto;
+    white-space: nowrap;
+  }
+}
+
+// custom group input with btn
+.dx-button-has-icon .dx-icon {
+  width: auto;
+  height: auto;
+}
+
+.input-has-button-left{
+  padding-right: 0px !important;
+}
+
+.group-input-button .dx-item-content .dx-box-item:first-child{
+  flex: 20 1 0px !important;
+}
+
+.group-input-button .btn-small {
+  .dx-button-content {
+    padding: 4.25px;
+  }
+}
+.group-input-button .dx-field-item-content-location-right
+.input-right .dx-field-item-label-content{
+  width: 140px !important;
+}
+
+.creat-default-account .dx-item .dx-texteditor input{
+  min-height: 20px !important;
+  max-height: 35px !important;
+}
+
+.creat-default-account .dx-item .dx-texteditor{
+  height: 32px !important;
+  .dx-placeholder{
+    font-size: 13px !important;
+  }
+  .dx-placeholder:before{
+    padding: 3px 9px 3px !important;
+  }
+}
+
+// tùy chỉnh disable input
+.dx-item .dx-state-disabled{
+  background-color: #E3E3E3 !important;
+  input{
+    background: #E3E3E3 !important;
+  }
+}
+
+.creat-default-account .dx-button .dx-button-content {
+  padding: 8px 20px 8px !important;
+}
+
+.creat-default-account .dx-item  .dx-field-item-label{
+  padding-bottom: 5px;
+}
+
+
+
+//style cho input không thuộc dx-item
+.dx-field {
+  min-height: 27px;
+}
+
+.dx-field-label {
+  text-align: right;
+  padding: 3px 15px 2px 0;
+}
+dx-text-box, dx-number-box {
+  height: 27px;
+
+  .dx-texteditor-input {
+    padding: 0px 9px 9px;
+  }
+}
+
+.dx-texteditor {
+  border-radius: 0px;
+}
+
+.dx-texteditor.dx-widget.dx-state-disabled {
+  background-color: #E3E3E3 !important;
+  input{
+    background: #E3E3E3 !important;
+  }
+}

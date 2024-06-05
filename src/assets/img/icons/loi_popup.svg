@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" viewBox="0 0 36 36">
+  <defs>
+    <filter id="Ellipse_21" x="0" y="0" width="36" height="36" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-color="#ff5a5a" flood-opacity="0.478"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="loi_popup" transform="translate(-497 -159)">
+    <g transform="matrix(1, 0, 0, 1, 497, 159)" filter="url(#Ellipse_21)">
+      <circle id="Ellipse_21-2" data-name="Ellipse 21" cx="12" cy="12" r="12" transform="translate(4 4)" fill="#ff5a5a"/>
+    </g>
+    <path id="Path_2204" data-name="Path 2204" d="M228.154,153.219a1.06,1.06,0,0,1,.4-.834,1.443,1.443,0,0,1,.972-.344,1.232,1.232,0,0,1,.87.344,1.119,1.119,0,0,1,0,1.658,1.213,1.213,0,0,1-.87.353,1.418,1.418,0,0,1-.972-.353A1.07,1.07,0,0,1,228.154,153.219Zm.128-11.527a.931.931,0,0,1,.34-.772,1.366,1.366,0,0,1,.881-.272,1.015,1.015,0,0,1,.794.283,1.1,1.1,0,0,1,.253.761c0,1.044-.018,1.529-.053,3.892s-.053,3.108-.053,4.152a.571.571,0,0,1-.306.511,1.212,1.212,0,0,1-.635.185q-.964,0-.964-.7c0-1.044-.043-1.788-.128-4.152S228.282,142.736,228.282,141.692Z" transform="translate(283.846 27.352)" fill="#fff"/>
+  </g>
+</svg>
